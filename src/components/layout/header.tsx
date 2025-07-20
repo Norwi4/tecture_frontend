@@ -8,10 +8,10 @@ import Logo from '@/components/logo';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '#services', label: 'Services' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -31,8 +31,8 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-card/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        'sticky top-0 left-0 right-0 z-50 transition-all duration-300',
+        isScrolled ? 'bg-card/80 shadow-md backdrop-blur-sm' : 'bg-background'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
@@ -44,7 +44,7 @@ export default function Header() {
             </Link>
           ))}
           <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-            <Link href="#ideation">Get Started</Link>
+            <Link href="/ideation">Get Started</Link>
           </Button>
         </nav>
         <div className="md:hidden">
@@ -67,7 +67,7 @@ export default function Header() {
               </Link>
             ))}
             <Button asChild className="w-full mt-4" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-              <Link href="#ideation" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+              <Link href="/ideation" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
             </Button>
           </nav>
         </div>

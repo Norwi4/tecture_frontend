@@ -1,18 +1,12 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import Hero from '@/components/sections/hero';
-import Services from '@/components/sections/services';
-import Portfolio from '@/components/sections/portfolio';
 import IdeationTool from '@/components/sections/ideation-tool';
 
-export default function Home() {
+export default function IdeationPage() {
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1">
-        <Hero />
-        <Services />
-        <Portfolio />
         <IdeationTool />
       </main>
       <Footer />

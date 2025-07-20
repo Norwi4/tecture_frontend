@@ -30,17 +30,17 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><Link href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-                <li><Link href="#portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
-                <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+                <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+                <li><Link href="/portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
+                <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-foreground mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Web Development</Link></li>
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Mobile Development</Link></li>
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">UI/UX Design</Link></li>
+                <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Web Development</Link></li>
+                <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Mobile Development</Link></li>
+                <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">UI/UX Design</Link></li>
               </ul>
             </div>
             <div>
