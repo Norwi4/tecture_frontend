@@ -3,7 +3,6 @@ import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
 import Services from '@/components/sections/services';
 import Portfolio from '@/components/sections/portfolio';
-import IdeationTool from '@/components/sections/ideation-tool';
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <Hero />
         <Services />
         <Portfolio />
-        <IdeationTool />
       </main>
       <Footer />
     </div>

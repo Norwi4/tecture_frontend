@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 const Logo = () => {
   return (
-    <Link href="/" className="text-2xl font-bold" style={{ color: 'hsl(var(--primary))' }}>
-      Tecture
+    <Link href="/" className="text-2xl font-bold lowercase" style={{ color: 'hsl(var(--foreground))' }}>
+      umarta
     </Link>
   );
 };

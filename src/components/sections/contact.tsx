@@ -10,11 +10,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Please enter a valid email address."),
-  message: z.string().min(10, "Message must be at least 10 characters."),
+  name: z.string().min(2, "Имя должно содержать не менее 2 символов."),
+  email: z.string().email("Пожалуйста, введите действительный адрес электронной почты."),
+  message: z.string().min(10, "Сообщение должно содержать не менее 10 символов."),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -29,76 +30,64 @@ export default function Contact() {
   function onSubmit(values: FormValues) {
     console.log(values);
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. We'll get back to you soon.",
+      title: "Сообщение отправлено!",
+      description: "Спасибо за ваше обращение. Мы скоро с вами свяжемся.",
+      variant: "default",
     });
     form.reset();
   }
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-secondary/30">
+    <section id="contact" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Get in Touch</h2>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Свяжитесь с нами</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Have a project in mind or just want to say hello? We'd love to hear from you.
+            Готовы обсудить ваш проект? Напишите нам, и мы найдем лучшее решение для ваших задач.
           </p>
         </div>
-        <div className="grid md:grid-cols-5 gap-12">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12">
           <div className="md:col-span-2 space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full"><Mail className="w-6 h-6 text-primary" /></div>
-              <div>
-                <h3 className="font-semibold text-lg">Email</h3>
-                <p className="text-muted-foreground">hello@tecture.dev</p>
-              </div>
+            <div>
+                <h3 className="font-semibold text-lg mb-2">Электронная почта</h3>
+                <a href="mailto:info@umarta.dev" className="text-muted-foreground hover:text-primary transition-colors">info@umarta.dev</a>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full"><Phone className="w-6 h-6 text-primary" /></div>
-              <div>
-                <h3 className="font-semibold text-lg">Phone</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+             <div>
+                <h3 className="font-semibold text-lg mb-2">Telegram</h3>
+                <a href="https://t.me/umartadev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@umartadev</a>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full"><MapPin className="w-6 h-6 text-primary" /></div>
-              <div>
-                <h3 className="font-semibold text-lg">Office</h3>
-                <p className="text-muted-foreground">123 Innovation Drive, Tech City, 12345</p>
-              </div>
+            <div>
+                <h3 className="font-semibold text-lg mb-2">Адрес</h3>
+                <p className="text-muted-foreground">Ташкент, Узбекистан</p>
             </div>
           </div>
           <div className="md:col-span-3">
-            <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
-                <CardDescription>Fill out the form and we'll be in touch.</CardDescription>
-              </CardHeader>
-              <CardContent>
+            <Card className="shadow-lg bg-card border-border/20 p-2">
+              <CardContent className="p-6">
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField control={form.control} name="name" render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl><Input placeholder="Your Name" {...field} /></FormControl>
+                        <FormLabel>Имя</FormLabel>
+                        <FormControl><Input placeholder="Ваше имя" {...field} className="bg-background" /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     <FormField control={form.control} name="email" render={({ field }) => (
                       <FormItem>
                         <FormLabel>Email</FormLabel>
-                        <FormControl><Input type="email" placeholder="your@email.com" {...field} /></FormControl>
+                        <FormControl><Input type="email" placeholder="you@example.com" {...field} className="bg-background" /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     <FormField control={form.control} name="message" render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl><Textarea placeholder="How can we help?" className="min-h-[100px]" {...field} /></FormControl>
+                        <FormLabel>Сообщение</FormLabel>
+                        <FormControl><Textarea placeholder="Расскажите о вашем проекте..." className="min-h-[120px] bg-background" {...field} /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90">Send Message</Button>
+                    <Button type="submit" className="w-full rounded-full" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>Отправить</Button>
                   </form>
                 </Form>
               </CardContent>

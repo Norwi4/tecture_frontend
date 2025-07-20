@@ -1,59 +1,53 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Code, Smartphone, Palette, BrainCircuit, Cloud, Link as LinkIcon } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
+import Link from 'next/link';
 
 const services = [
   {
-    icon: <Code className="w-10 h-10 text-primary" />,
-    title: "Web Development",
-    description: "Building responsive, high-performance websites and web applications with modern technologies.",
+    title: "Веб-сервисы",
+    description: "Разрабатываем и запускаем масштабируемые и отказоустойчивые веб-сервисы.",
   },
   {
-    icon: <Smartphone className="w-10 h-10 text-primary" />,
-    title: "Mobile App Development",
-    description: "Creating intuitive and engaging native and cross-platform mobile apps for iOS and Android.",
+    title: "UX/UI Дизайн",
+    description: "Проектируем и создаем удобные и современные интерфейсы для пользователей.",
   },
   {
-    icon: <Palette className="w-10 h-10 text-primary" />,
-    title: "UI/UX Design",
-    description: "Designing beautiful, user-centric interfaces that provide seamless user experiences.",
+    title: "Мобильные приложения",
+    description: "Создаем нативные и кроссплатформенные приложения для iOS и Android.",
   },
   {
-    icon: <BrainCircuit className="w-10 h-10 text-primary" />,
-    title: "AI Solutions",
-    description: "Integrating intelligent AI models to automate processes and unlock new capabilities.",
+    title: "Брендинг",
+    description: "Помогаем создать уникальный бренд и выделиться на рынке.",
   },
   {
-    icon: <Cloud className="w-10 h-10 text-primary" />,
-    title: "Cloud Services",
-    description: "Leveraging cloud platforms for scalable, secure, and reliable infrastructure and services.",
+    title: "IT-консалтинг",
+    description: "Предоставляем экспертные консультации для оптимизации ваших IT-процессов.",
   },
   {
-    icon: <LinkIcon className="w-10 h-10 text-primary" />,
-    title: "Blockchain Development",
-    description: "Developing decentralized applications and smart contracts for the next generation of the web.",
+    title: "Поддержка",
+    description: "Обеспечиваем надежную поддержку и развитие ваших продуктов после запуска.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-background">
+    <section id="services" className="py-20 md:py-28 bg-card/50 border-y border-border/20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our Services</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We offer a complete suite of services to bring your vision to life.
-          </p>
+        <div className="text-left mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Услуги</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="text-center p-6 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <CardHeader className="items-center">
-                <div className="mb-4 p-4 bg-primary/10 rounded-full">
-                  {service.icon}
-                </div>
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardDescription>{service.description}</CardDescription>
+            <Card key={service.title} className="bg-transparent border-0 shadow-none p-0 group">
+              <Link href="/services">
+                <CardContent className="p-6 border border-border/20 rounded-lg h-full flex flex-col hover:bg-card transition-colors">
+                  <h3 className="text-2xl font-bold mb-3 flex items-center justify-between">
+                    {service.title}
+                    <ArrowRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-transform" />
+                  </h3>
+                  <p className="text-muted-foreground flex-grow">{service.description}</p>
+                </CardContent>
+              </Link>
             </Card>
           ))}
         </div>
