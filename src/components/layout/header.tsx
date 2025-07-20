@@ -10,6 +10,7 @@ import { usePathname } from 'next/navigation';
 
 const navItems = [
   { href: '/services', label: 'Услуги' },
+  { href: '/work-options', label: 'Как мы работаем' },
   { href: '/portfolio', label: 'Портфолио' },
   { href: '/about', label: 'О нас' },
 ];
