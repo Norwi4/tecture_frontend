@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 10 10% 10%; /* Dark background */
-    --foreground: 0 0% 98%;
-    --card: 24 9.8% 10.5%;
-    --card-foreground: 0 0% 98%;
-    --popover: 24 9.8% 10.5%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142 71% 45%; /* Green accent */
+    --background: 0 0% 94%; /* Light gray */
+    --foreground: 220 20% 10%; /* Dark text */
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary: 180 100% 25%; /* Deep teal */
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 142 71% 45%; /* Green accent */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 220 20% 10%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 20 60% 50%; /* Burnt orange */
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142 71% 45%;
+    --border: 220 20% 80%;
+    --input: 220 20% 85%;
+    --ring: 220 20% 10%;
     --radius: 0.5rem;
   }
  
   .dark {
-    --background: 10 10% 10%;
+    --background: 220 10% 10%;
     --foreground: 0 0% 98%;
-    --card: 24 9.8% 10.5%;
+    --card: 220 10% 15%;
     --card-foreground: 0 0% 98%;
-    --popover: 24 9.8% 10.5%;
+    --popover: 220 10% 15%;
     --popover-foreground: 0 0% 98%;
-    --primary: 142 71% 45%;
+    --primary: 180 100% 35%; /* Lighter teal for dark mode */
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 220 10% 20%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 142 71% 45%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 20 70% 55%; /* Lighter orange for dark mode */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142 71% 45%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 180 100% 35%;
   }
 }
  
