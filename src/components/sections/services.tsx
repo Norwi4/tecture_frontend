@@ -14,7 +14,7 @@ const services = [
     title: "MVP",
     description: "Минимально жизнеспособный продукт, содержащий базовый функционал",
     icon: "https://static.tildacdn.com/tild3130-3637-4839-b138-643937363965/9fd3d03c-a2a4-411c-8.png",
-    link: "#",
+    link: "/mvp",
   },
   {
     title: "Разработка проекта или продукта",
