@@ -8,7 +8,7 @@ const services = [
     title: "Прототипирование",
     description: "Создание прототипа, с целью проверки гипотезы и выбора варианта реализации",
     icon: "https://static.tildacdn.com/tild6436-3439-4665-b631-313366346462/fbc92aef-777e-49a1-8.png",
-    link: "#",
+    link: "/prototyping",
   },
   {
     title: "MVP",
