@@ -14,10 +14,10 @@ export default function Hero() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="#contact">Start a Project</Link>
+            <Link href="/contact">Start a Project</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="bg-card">
-            <Link href="#portfolio">
+            <Link href="/portfolio">
               Explore Our Work <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

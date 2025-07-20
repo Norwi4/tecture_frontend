@@ -16,7 +16,7 @@ export default function About() {
               Our culture is built on continuous learning and mutual respect. We thrive on complex challenges and are committed to delivering solutions that not only meet but exceed client expectations, creating tangible value and lasting impact.
             </p>
             <Button asChild size="lg" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-              <Link href="#contact">Meet the Team</Link>
+              <Link href="/contact">Meet the Team</Link>
             </Button>
           </div>
           <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
