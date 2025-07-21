@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -23,7 +22,7 @@ export default function Hero() {
           </div>
           <div className="relative h-64 md:h-[450px] w-full">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://static.tildacdn.com/tild3030-3034-4732-b661-316532393765/Image_shapka.png"
               alt="Software Development"
               fill
               style={{objectFit: 'contain'}}

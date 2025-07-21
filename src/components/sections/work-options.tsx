@@ -16,7 +16,7 @@ export default function WorkOptions() {
           </div>
           <div className="relative h-80 w-full hidden md:block">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://static.tildacdn.com/tild3462-6430-4761-b332-646332333933/Project.svg"
               alt="Work Options Illustration"
               fill
               style={{ objectFit: 'contain' }}
@@ -48,7 +48,7 @@ export default function WorkOptions() {
           <div className="space-y-8">
             <div className="relative h-80 w-full">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://static.tildacdn.com/tild6635-3763-4432-a464-373837623934/Fix.svg"
                 alt="Fix price"
                 fill
                 style={{ objectFit: 'contain' }}
@@ -66,7 +66,7 @@ export default function WorkOptions() {
           <div className="space-y-8">
             <div className="relative h-80 w-full">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://static.tildacdn.com/tild3630-6333-4337-b134-623439353039/Material_1.svg"
                 alt="Time and material"
                 fill
                 style={{ objectFit: 'contain' }}

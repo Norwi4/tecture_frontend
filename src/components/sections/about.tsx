@@ -16,7 +16,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-96 rounded-lg overflow-hidden">
              <Image
-              src="https://placehold.co/800x600.png"
+              src="https://static.tildacdn.com/tild3164-3236-4139-a162-376135623032/photo.png"
               alt="Команда Umarta"
               fill
               style={{objectFit: 'cover'}}
