@@ -4,30 +4,35 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section id="home" className="bg-background pt-32 pb-20 md:pt-40 md:pb-24">
+    <section id="home" className="relative bg-background pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground mb-6">
               Разработка программного обеспечения
             </h1>
-            <p className="max-w-xl mx-auto md:mx-0 text-lg md:text-xl text-muted-foreground mb-10">
-              Наша цель - создание надежных эффективных продуктов для роста Вашего бизнеса
+            <p className="max-w-lg mx-auto md:mx-0 text-lg md:text-xl text-muted-foreground mb-10">
+              Наша цель - создание надежных и эффективных продуктов для роста Вашего бизнеса.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="rounded-full px-10 py-6 text-lg">
-                <Link href="/contact">Написать нам</Link>
+              <Button asChild size="lg" className="px-10 py-6 text-lg">
+                <Link href="/contact">Начать проект</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="px-10 py-6 text-lg">
+                <Link href="/services">Наши услуги</Link>
               </Button>
             </div>
           </div>
-          <div className="relative h-64 md:h-[450px] w-full">
+          <div className="relative h-80 md:h-[500px] w-full">
             <Image
-              src="https://placehold.co/600x450.png"
+              src="https://placehold.co/700x500.png"
               alt="Software Development"
               fill
-              style={{objectFit: 'contain'}}
-              data-ai-hint="software development"
+              className="object-cover rounded-lg"
+              data-ai-hint="abstract technology"
             />
+             <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+             <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>

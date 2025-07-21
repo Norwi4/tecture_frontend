@@ -1,122 +1,76 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
-import Link from 'next/link';
-import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ArrowRight, Code, Layers, Rocket, Smartphone, Bot, TestTube, Search } from 'lucide-react';
 
 const services = [
   {
-    title: "Прототипирование",
-    description: "Создание прототипа, с целью проверки гипотезы и выбора варианта реализации",
-    icon: "https://placehold.co/64x64.png",
-    hint: "prototyping wireframe",
-    link: "/prototyping",
-  },
-  {
-    title: "MVP",
-    description: "Минимально жизнеспособный продукт, содержащий базовый функционал",
-    icon: "https://placehold.co/64x64.png",
-    hint: "startup rocket",
-    link: "/mvp",
+    title: "Прототипирование и MVP",
+    description: "Создание прототипа для проверки гипотезы, разработка минимально жизнеспособного продукта (MVP) для быстрого запуска на рынок и сбора обратной связи.",
+    icon: <Layers className="h-8 w-8 text-primary" />,
   },
   {
     title: "Разработка проекта или продукта",
-    description: "Разработка ПО под конкретные задачи бизнеса",
-    icon: "https://placehold.co/64x64.png",
-    hint: "product development",
-    link: "#",
+    description: "Полный цикл разработки программного обеспечения под конкретные задачи вашего бизнеса, от идеи до ввода в эксплуатацию и поддержки.",
+    icon: <Code className="h-8 w-8 text-primary" />,
   },
   {
     title: "Выделенные команды",
-    description: "Формируем команду или предоставим отдельных специалистов, под задачи заказчика",
-    icon: "https://placehold.co/64x64.png",
-    hint: "team collaboration",
-    link: "#",
-  },
-  {
-    title: "Модернизация устаревших систем",
-    description: "Обновление ПО, перенос системы и данных в облако, добавление мобильных приложений и др.",
-    icon: "https://placehold.co/64x64.png",
-    hint: "system update",
-    link: "#",
+    description: "Формирование команды специалистов или предоставление отдельных экспертов (аутстаффинг) под ваши задачи и проекты.",
+    icon: <Rocket className="h-8 w-8 text-primary" />,
   },
   {
     title: "Разработка мобильных приложений",
-    description: "Разработка мобильных приложений для Android, iPhone, Аврора",
-    icon: "https://placehold.co/64x64.png",
-    hint: "mobile development",
-    link: "#",
+    description: "Создание нативных и кроссплатформенных мобильных приложений для Android, iOS и других платформ.",
+    icon: <Smartphone className="h-8 w-8 text-primary" />,
   },
   {
-    title: "Бизнес-анализ",
-    description: "Определение целей и задач проекта, а также потребности пользователей",
-    icon: "https://placehold.co/64x64.png",
-    hint: "business analysis",
-    link: "#",
+    title: "AI & ML Решения",
+    description: "Интеграция искусственного интеллекта и машинного обучения для автоматизации процессов, анализа данных и создания интеллектуальных систем.",
+    icon: <Bot className="h-8 w-8 text-primary" />,
   },
   {
-    title: "Тестирование",
-    description: "Проведение проверки и оценки качества, производительности, удобства продукта",
-    icon: "https://placehold.co/64x64.png",
-    hint: "software testing",
-    link: "#",
+    title: "Тестирование и QA",
+    description: "Проведение ручного и автоматизированного тестирования для обеспечения качества, производительности и удобства использования вашего продукта.",
+    icon: <TestTube className="h-8 w-8 text-primary" />,
   },
   {
-    title: "Дизайн",
-    description: "Разработка оформления и функциональности продукта",
-    icon: "https://placehold.co/64x64.png",
-    hint: "ui ux design",
-    link: "#",
+    title: "Бизнес-анализ и консалтинг",
+    description: "Глубокий анализ бизнес-процессов, определение целей проекта, выявление потребностей пользователей и формирование технических требований.",
+    icon: <Search className="h-8 w-8 text-primary" />,
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-background">
+    <section id="services" className="py-20 md:py-28 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Услуги</h1>
-                 <p className="text-lg text-muted-foreground">
-                    Разберемся в вашей бизнес потребности и разработаем программное обеспечение с нуля и до ввода в эксплуатацию. Предоставим полный пакет услуг по созданию программного обеспечения.
-                 </p>
-            </div>
-            <div className="relative h-80 w-full hidden md:block">
-                <Image
-                    src="https://placehold.co/500x320.png"
-                    alt="Services Illustration"
-                    fill
-                    style={{objectFit: 'contain'}}
-                    data-ai-hint="software development"
-                />
-            </div>
+        <div className="max-w-3xl text-center mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Наши Услуги</h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Мы предоставляем полный спектр услуг по созданию, запуску и поддержке цифровых продуктов любого уровня сложности.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <Card key={service.title} className="bg-card border-border/20 group hover:shadow-lg transition-shadow duration-300 flex flex-col">
-              <CardHeader className="flex-shrink-0">
-                  <div className="flex justify-between items-start">
-                      <h3 className="text-xl font-bold mb-2 pr-4">{service.title}</h3>
-                      <div className="relative h-16 w-16 flex-shrink-0">
-                        <Image
-                            src={service.icon}
-                            alt={`${service.title} icon`}
-                            width={64}
-                            height={64}
-                            style={{objectFit: 'contain'}}
-                            data-ai-hint={service.hint}
-                         />
-                      </div>
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="w-full">
+            {services.map((service, index) => (
+              <AccordionItem value={`item-${index}`} key={index}>
+                <AccordionTrigger className="py-6">
+                  <div className="flex items-center gap-4">
+                    {service.icon}
+                    <span className="text-xl font-semibold">{service.title}</span>
                   </div>
-              </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between">
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <Link href={service.link} className="text-primary font-semibold flex items-center group-hover:text-accent transition-colors">
-                  Перейти <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 text-base text-muted-foreground">
+                  {service.description}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

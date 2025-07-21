@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-border/20">
+    <footer className="bg-secondary border-t">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
@@ -36,7 +36,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground mb-4">
               Давайте обсудим вашу идею и найдем лучшее решение.
             </p>
-            <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+            <Button asChild>
               <Link href="/contact">Обсудить проект</Link>
             </Button>
           </div>
