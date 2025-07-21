@@ -68,7 +68,7 @@ export default function Mvp() {
           </div>
           <div className="relative h-80 w-full">
             <Image
-              src="https://static.tildacdn.com/tild6463-6230-4831-a364-636366643933/svg.svg"
+              src="https://placehold.co/600x400.png"
               alt="MVP Illustration"
               fill
               style={{ objectFit: 'contain' }}

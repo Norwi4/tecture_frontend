@@ -23,7 +23,7 @@ export default function Hero() {
           </div>
           <div className="relative h-64 md:h-[450px] w-full">
             <Image
-              src="https://static.tildacdn.com/tild3330-3137-4234-b238-316530383634/Shapka_2.svg"
+              src="https://placehold.co/600x400.png"
               alt="Software Development"
               fill
               style={{objectFit: 'contain'}}
