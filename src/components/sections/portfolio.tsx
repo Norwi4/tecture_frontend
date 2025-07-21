@@ -5,25 +5,25 @@ const projects = [
   {
     title: "TeaMentor",
     description: "Сервис для повышения уровня Java и Python разработчиков",
-    image: "https://static.tildacdn.com/tild6263-3462-4862-b739-303765653431/365cf24d-e921-4f65-9.png",
+    image: "https://placehold.co/600x400.png",
     hint: "education platform",
   },
   {
     title: "Абрау Дюрсо",
     description: "Разработка 1С решений для винодельческой компании Абрау Дюрсо",
-    image: "https://static.tildacdn.com/tild3864-3461-4037-a566-643562313930/Abrau.png",
+    image: "https://placehold.co/600x400.png",
     hint: "wine production",
   },
   {
     title: "Gureev Pro",
     description: "Дизайн и frontend-разработка сервисов по AI для Gureev Pro",
-    image: "https://static.tildacdn.com/tild3064-3463-4764-b939-323338306336/Gureev_Pro.jpg",
-    hint: "ai service dashboard",
+    image: "https://placehold.co/600x400.png",
+    hint: "ai service",
   },
     {
     title: "LMS платформа",
     description: "Нагрузочное тестирование LMS платформы онлайн-школы",
-    image: "https://static.tildacdn.com/tild3164-3037-4563-a465-636134623139/photo.png",
+    image: "https://placehold.co/600x400.png",
     hint: "online learning",
   },
 ];

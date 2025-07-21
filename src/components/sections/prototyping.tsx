@@ -69,7 +69,7 @@ export default function Prototyping() {
           </div>
           <div className="relative h-80 w-full">
             <Image
-              src="https://static.tildacdn.com/tild3863-6130-4566-b538-376635383935/Frame_5.png"
+              src="https://placehold.co/600x320.png"
               alt="Prototyping Illustration"
               fill
               style={{ objectFit: 'contain' }}

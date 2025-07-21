@@ -16,11 +16,11 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-96 rounded-lg overflow-hidden">
              <Image
-              src="https://static.tildacdn.com/tild3164-3236-4139-a162-376135623032/photo.png"
+              src="https://placehold.co/600x400.png"
               alt="Команда Tecture"
               fill
               style={{objectFit: 'cover'}}
-              data-ai-hint="team meeting office"
+              data-ai-hint="team meeting"
             />
           </div>
           <div>

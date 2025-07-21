@@ -22,11 +22,11 @@ export default function Hero() {
           </div>
           <div className="relative h-64 md:h-[450px] w-full">
             <Image
-              src="https://static.tildacdn.com/tild3030-3034-4732-b661-316532393765/Image_shapka.png"
+              src="https://placehold.co/600x450.png"
               alt="Software Development"
               fill
               style={{objectFit: 'contain'}}
-              data-ai-hint="software development illustration"
+              data-ai-hint="software development"
             />
           </div>
         </div>
