@@ -78,7 +78,7 @@ export default function Career() {
                 Мы предлагаем стабильность, комфортные условия труда и возможности для профессионального роста.
             </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-card p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-semibold mb-3">Стабильность и уверенность</h3>
                 <p className="text-muted-foreground">Мы предлагаем официальное трудоустройство, конкурентную заработную плату и долгосрочные проекты, которые дают уверенность в завтрашнем дне.</p>
@@ -86,6 +86,22 @@ export default function Career() {
              <div className="bg-card p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-semibold mb-3">Комфортные условия</h3>
                 <p className="text-muted-foreground">Современный офис, гибкий график, возможность удаленной работы и дружелюбная атмосфера — все для того, чтобы вы могли сосредоточиться на интересных задачах.</p>
+            </div>
+            <div className="bg-card p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-semibold mb-3">Профессиональное развитие</h3>
+                <p className="text-muted-foreground">Мы оплачиваем курсы, конференции и поощряем обмен знаниями внутри команды, чтобы вы могли постоянно совершенствовать свои навыки.</p>
+            </div>
+            <div className="bg-card p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-semibold mb-3">Приятные бонусы</h3>
+                <p className="text-muted-foreground">Предлагаем ДМС со стоматологией, компенсацию затрат на спорт и современное оборудование для комфортной работы.</p>
+            </div>
+            <div className="bg-card p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-semibold mb-3">Процессы</h3>
+                <p className="text-muted-foreground">Мы используем гибкие методологии разработки и поощряем открытый диалог, чтобы каждый мог влиять на конечный результат.</p>
+            </div>
+            <div className="bg-card p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-semibold mb-3">Атмосфера в коллективе</h3>
+                <p className="text-muted-foreground">Мы ценим дружеские отношения, взаимопомощь и неформальное общение. У нас нет строгой иерархии и бюрократии.</p>
             </div>
         </div>
       </section>
