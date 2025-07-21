@@ -12,7 +12,7 @@ export default function Hero() {
               Разработка программного обеспечения
             </h1>
             <p className="max-w-lg mx-auto md:mx-0 text-lg md:text-xl text-muted-foreground mb-10">
-              Наша цель - создание надежных и эффективных продуктов для роста Вашего бизнеса.
+              Мы превращаем ваши идеи в цифровые продукты, которые приносят реальную пользу и прибыль.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="px-10 py-6 text-lg">
