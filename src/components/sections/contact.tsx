@@ -50,11 +50,11 @@ export default function Contact() {
           <div className="md:col-span-2 space-y-8">
             <div>
                 <h3 className="font-semibold text-lg mb-2">Электронная почта</h3>
-                <a href="mailto:info@umarta.dev" className="text-muted-foreground hover:text-primary transition-colors">info@umarta.dev</a>
+                <a href="mailto:info@tecture.dev" className="text-muted-foreground hover:text-primary transition-colors">info@tecture.dev</a>
             </div>
              <div>
                 <h3 className="font-semibold text-lg mb-2">Telegram</h3>
-                <a href="https://t.me/umartadev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@umartadev</a>
+                <a href="https://t.me/tecturedev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@tecturedev</a>
               </div>
             <div>
                 <h3 className="font-semibold text-lg mb-2">Адрес</h3>

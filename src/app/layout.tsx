@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Umarta - Разработка цифровых продуктов',
+  title: 'Tecture - Разработка цифровых продуктов',
   description: 'Разработка цифровых продуктов для вашего бизнеса. Веб-сервисы, мобильные приложения, UX/UI дизайн.',
 };
 

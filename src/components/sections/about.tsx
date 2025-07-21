@@ -17,7 +17,7 @@ export default function About() {
           <div className="relative h-96 rounded-lg overflow-hidden">
              <Image
               src="https://static.tildacdn.com/tild3164-3236-4139-a162-376135623032/photo.png"
-              alt="Команда Umarta"
+              alt="Команда Tecture"
               fill
               style={{objectFit: 'cover'}}
               data-ai-hint="team meeting office"

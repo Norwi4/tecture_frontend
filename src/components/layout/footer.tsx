@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Logo />
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Umarta. Все права защищены.
+              © {new Date().getFullYear()} Tecture. Все права защищены.
             </p>
           </div>
 
@@ -26,8 +26,8 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Контакты</h3>
             <ul className="space-y-2">
-              <li><a href="mailto:info@umarta.dev" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@umarta.dev</a></li>
-              <li><a href="https://t.me/umartadev" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Telegram</a></li>
+              <li><a href="mailto:info@tecture.dev" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@tecture.dev</a></li>
+              <li><a href="https://t.me/tecturedev" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Telegram</a></li>
             </ul>
           </div>
           
