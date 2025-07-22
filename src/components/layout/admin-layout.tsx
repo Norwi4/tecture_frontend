@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Handshake, User, PanelLeft, Package2 } from "lucide-react";
+import { Home, Handshake, User, PanelLeft, Package2, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -11,10 +11,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Logo from "../logo";
 import { ThemeToggle } from "../theme-toggle";
+import React, { useEffect } from "react";
 
 const navItems = [
   { href: "/admin", label: "Главная", icon: Home },
@@ -28,6 +29,19 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("admin-auth") === "true";
+    if (!isAuthenticated) {
+      router.replace("/admin/login");
+    }
+  }, [router]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("admin-auth");
+    router.push("/admin/login");
+  };
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
@@ -62,6 +76,17 @@ export default function AdminLayout({
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
           <ThemeToggle />
+           <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                   <Button variant="ghost" size="icon" onClick={handleLogout} className="text-muted-foreground hover:text-foreground">
+                    <LogOut className="h-5 w-5" />
+                    <span className="sr-only">Выйти</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent side="right">Выйти</TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
         </nav>
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
@@ -95,6 +120,13 @@ export default function AdminLayout({
                     {item.label}
                   </Link>
                 ))}
+                 <button
+                    onClick={handleLogout}
+                    className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  >
+                    <LogOut className="h-5 w-5" />
+                    Выйти
+                  </button>
               </nav>
             </SheetContent>
           </Sheet>
