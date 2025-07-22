@@ -54,8 +54,29 @@ export default function Portfolio({ showAllLink = false, projectCount }: Portfol
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
+        {!showAllLink && (
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Наши проекты</h1>
+                    <p className="text-lg text-muted-foreground">
+                        Мы гордимся каждым проектом, который мы создали. Здесь вы можете увидеть примеры наших работ, которые демонстрируют наш опыт и приверженность качеству.
+                    </p>
+                </div>
+                <div className="relative h-80 w-full">
+                    <Image
+                        src="https://placehold.co/600x400.png"
+                        alt="Portfolio illustration"
+                        fill
+                        className="object-contain"
+                        data-ai-hint="creative work collage"
+                    />
+                </div>
+            </div>
+        )}
         <div className="flex justify-between items-center mb-12">
-           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Наши Проекты</h2>
+           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+            {showAllLink ? 'Наши Проекты' : 'Все проекты'}
+           </h2>
            {showAllLink && (
              <Button asChild variant="link" className="hidden md:flex">
                <Link href="/portfolio">Смотреть все проекты <ArrowRight className="ml-2" /></Link>
