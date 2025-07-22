@@ -1,6 +1,7 @@
 import { ArrowRight, Briefcase, Heart, Shield } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const values = [
   {
@@ -44,11 +45,24 @@ const vacancies = [
 export default function Career() {
   return (
     <div className="bg-background text-foreground">
-      <section className="container mx-auto px-4 md:px-6 py-20 md:py-28 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Карьера в Тектуре</h1>
-        <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-          Присоединяйтесь к нашей команде профессионалов, чтобы создавать инновационные цифровые продукты и расти вместе с нами.
-        </p>
+      <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Карьера в Тектуре</h1>
+              <p className="text-lg text-muted-foreground">
+                Присоединяйтесь к нашей команде профессионалов, чтобы создавать инновационные цифровые продукты и расти вместе с нами.
+              </p>
+            </div>
+            <div className="relative h-80 w-full">
+                <Image
+                    src="https://placehold.co/600x400.png"
+                    alt="Career illustration"
+                    fill
+                    className="object-contain"
+                    data-ai-hint="team working"
+                />
+            </div>
+        </div>
       </section>
 
       <section className="bg-secondary py-20 md:py-28">
