@@ -13,6 +13,7 @@ const navItems = [
   { href: '/products', label: 'Продукты' },
   { href: '/work-options', label: 'Как мы работаем' },
   { href: '/portfolio', label: 'Портфолио' },
+  { href: '/partners', label: 'Партнеры' },
   { href: '/career', label: 'Карьера' },
   { href: '/about', label: 'О нас' },
 ];
