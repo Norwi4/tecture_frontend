@@ -1,16 +1,23 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/logo';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 
 const navItems = [
-  { href: '/services', label: 'Услуги' },
   { href: '/products', label: 'Продукты' },
   { href: '/work-options', label: 'Как мы работаем' },
   { href: '/portfolio', label: 'Портфолио' },
@@ -18,6 +25,11 @@ const navItems = [
   { href: '/career', label: 'Карьера' },
   { href: '/about', label: 'О нас' },
 ];
+
+const servicesNav = [
+    { href: '/services/software-development', label: 'Разработка ПО' },
+    { href: '/services/industrial-automation', label: 'Инженерная автоматизация' },
+]
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,6 +57,25 @@ export default function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Logo />
         <nav className="hidden md:flex items-center gap-6">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+               <button className={cn(
+                "flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary",
+                pathname.startsWith('/services') ? "text-primary" : "text-foreground/80"
+              )}>
+                Услуги
+                <ChevronDown className="h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {servicesNav.map((item) => (
+                <DropdownMenuItem key={item.href} asChild>
+                  <Link href={item.href}>{item.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           {navItems.map((item) => (
             <Link 
               key={item.label} 
@@ -74,6 +105,9 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-sm">
           <nav className="flex flex-col items-center gap-6 p-6">
+            <Link href="/services" className={cn("text-lg font-medium transition-colors hover:text-primary", pathname.startsWith('/services') ? "text-primary" : "text-foreground/80")} onClick={() => setIsMenuOpen(false)}>
+                Услуги
+            </Link>
             {navItems.map((item) => (
               <Link
                 key={item.label}
