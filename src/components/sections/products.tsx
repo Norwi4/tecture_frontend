@@ -33,16 +33,25 @@ const products = [
 export default function Products() {
   return (
     <div className="bg-background text-foreground">
-      <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши продукты</h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Готовые решения, которые помогают бизнесу расти, автоматизировать процессы и выходить на новый уровень эффективности.
-            </p>
+       <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши продукты</h1>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Готовые решения, которые помогают бизнесу расти, автоматизировать процессы и выходить на новый уровень эффективности.
+              </p>
+            </div>
+             <div className="relative h-80 w-full">
+                <Image
+                    src="https://placehold.co/600x400.png"
+                    alt="Products illustration"
+                    fill
+                    className="object-contain"
+                    data-ai-hint="innovative products"
+                />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-20 md:py-28 bg-secondary">
          <div className="container mx-auto px-4 md:px-6">
