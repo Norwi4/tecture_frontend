@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -62,6 +63,8 @@ type FormValues = z.infer<typeof formSchema>;
 
 export default function Partners() {
   const { toast } = useToast();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: { fullName: "", companyName: "", email: "" },
@@ -73,7 +76,8 @@ export default function Partners() {
       title: "Заявка отправлена!",
       description: "Спасибо за ваш интерес! Мы скоро с вами свяжемся.",
     });
-    // Тут можно закрыть диалоговое окно, если оно не закрывается автоматически
+    form.reset();
+    setIsDialogOpen(false);
   }
 
   return (
@@ -85,7 +89,7 @@ export default function Partners() {
             <p className="text-lg text-muted-foreground mb-10">
               Мы верим в силу сотрудничества и строим долгосрочные отношения с нашими партнерами для достижения общих целей.
             </p>
-            <Dialog>
+            <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
               <DialogTrigger asChild>
                 <Button size="lg">Стать партнером</Button>
               </DialogTrigger>
