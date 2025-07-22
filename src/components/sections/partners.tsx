@@ -51,6 +51,12 @@ const partners = [
     logo: "https://placehold.co/100x100.png",
     logoHint: "data analytics logo",
   },
+    {
+    name: "NextGen Mobility",
+    description: "Разработка инновационных решений для городского транспорта и логистики.",
+    logo: "https://placehold.co/100x100.png",
+    logoHint: "transportation logo",
+  },
 ];
 
 const formSchema = z.object({
@@ -143,8 +149,7 @@ export default function Partners() {
 
       <section className="bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-center mb-12">Наши уважаемые партнеры</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {partners.map((partner) => (
               <Card key={partner.name} className="bg-card text-center p-6 shadow-lg rounded-xl">
                 <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
