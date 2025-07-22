@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const projects = [
+const allProjects = [
   {
     title: "TeaMentor",
     description: "Сервис для повышения уровня Java и Python разработчиков",
@@ -23,17 +23,44 @@ const projects = [
     image: "https://placehold.co/600x400.png",
     hint: "ai service",
   },
+  {
+    title: "E-commerce Платформа",
+    description: "Создание крупного онлайн-магазина с нуля, включая бэкенд и фронтенд.",
+    image: "https://placehold.co/600x400.png",
+    hint: "online shopping",
+  },
+  {
+    title: "Корпоративный портал",
+    description: "Внутренний портал для крупной компании для управления задачами и документами.",
+    image: "https://placehold.co/600x400.png",
+    hint: "corporate intranet",
+  },
+  {
+    title: "Система бронирования",
+    description: "Разработка системы онлайн-бронирования для сети отелей.",
+    image: "https://placehold.co/600x400.png",
+    hint: "hotel booking",
+  },
 ];
 
-export default function Portfolio() {
+interface PortfolioProps {
+  showAllLink?: boolean;
+  projectCount?: number;
+}
+
+export default function Portfolio({ showAllLink = false, projectCount }: PortfolioProps) {
+  const projects = projectCount ? allProjects.slice(0, projectCount) : allProjects;
+
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center mb-12">
            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Наши Проекты</h2>
-           <Button asChild variant="link" className="hidden md:flex">
-             <Link href="/portfolio">Смотреть все проекты <ArrowRight className="ml-2" /></Link>
-           </Button>
+           {showAllLink && (
+             <Button asChild variant="link" className="hidden md:flex">
+               <Link href="/portfolio">Смотреть все проекты <ArrowRight className="ml-2" /></Link>
+             </Button>
+           )}
         </div>
        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -56,11 +83,13 @@ export default function Portfolio() {
             </Card>
           ))}
         </div>
-         <div className="text-center mt-12 md:hidden">
-            <Button asChild variant="outline">
-              <Link href="/portfolio">Смотреть все проекты</Link>
-            </Button>
-        </div>
+         {showAllLink && (
+           <div className="text-center mt-12 md:hidden">
+              <Button asChild variant="outline">
+                <Link href="/portfolio">Смотреть все проекты</Link>
+              </Button>
+          </div>
+         )}
       </div>
     </section>
   );

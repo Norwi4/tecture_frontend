@@ -7,7 +7,7 @@ export default function PortfolioPage() {
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1">
-        <Portfolio />
+        <Portfolio showAllLink={false} />
       </main>
       <Footer />
     </div>

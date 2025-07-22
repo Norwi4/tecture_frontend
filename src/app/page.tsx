@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
         <Services />
         <WhyUs />
-        <Portfolio />
+        <Portfolio showAllLink={true} projectCount={3} />
         <About />
         <Contact />
       </main>
