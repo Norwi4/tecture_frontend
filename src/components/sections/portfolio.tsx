@@ -81,7 +81,7 @@ export default function Portfolio({ showAllLink = false, projectCount }: Portfol
             <div className="container mx-auto px-4 md:px-6">
             <div className="flex justify-between items-center mb-12">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                {showAllLink ? 'Наши Проекты' : 'Все проекты'}
+                {showAllLink ? 'Наши проекты' : 'Все проекты'}
             </h2>
             {showAllLink && (
                 <Button asChild variant="link" className="hidden md:flex">
