@@ -26,7 +26,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="pt-20 pb-10 md:pt-28 md:pb-16 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl text-center mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -38,7 +38,7 @@ export default function WhyUs() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
-            <Card key={index} className="bg-card border-none shadow-lg text-center p-6 flex flex-col items-center">
+            <Card key={index} className="bg-card shadow-lg text-center p-6 flex flex-col items-center">
               <CardHeader className="p-0 text-center flex flex-col items-center">
                 {reason.icon}
                 <CardTitle className="mt-4">{reason.title}</CardTitle>
