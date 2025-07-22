@@ -15,7 +15,7 @@ export default function WorkOptions() {
             </div>
             <div className="relative h-80 w-full">
               <Image
-                src="https://placehold.co/600x320.png"
+                src="https://placehold.co/600x400.png"
                 alt="Work Options Illustration"
                 fill
                 style={{ objectFit: 'contain' }}
