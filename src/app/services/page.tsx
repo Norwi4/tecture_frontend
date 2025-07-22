@@ -35,7 +35,7 @@ export default function ServicesPage() {
                     <div className="container mx-auto px-4 md:px-6 py-20 md:py-28">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши Услуги</h1>
+                                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши услуги</h1>
                                 <p className="mt-4 text-lg text-muted-foreground">
                                     Мы предлагаем комплексные решения в двух ключевых областях: создание современных цифровых продуктов и внедрение передовых систем промышленной автоматизации.
                                 </p>
