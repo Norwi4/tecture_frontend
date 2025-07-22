@@ -60,9 +60,6 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <Button asChild variant="ghost">
-             <Link href="/contact">Связаться</Link>
-          </Button>
           <Button asChild>
             <Link href="/contact">Обсудить проект</Link>
           </Button>
