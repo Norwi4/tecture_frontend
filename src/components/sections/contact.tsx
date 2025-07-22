@@ -72,7 +72,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Адрес</h3>
-                <p className="text-muted-foreground">Ташкент, Узбекистан</p>
+                <p className="text-muted-foreground">г. Калуга, ул. Московская, д. 354</p>
               </div>
             </div>
           </div>

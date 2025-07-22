@@ -40,8 +40,7 @@ export default function WhyUs() {
           {reasons.map((reason, index) => (
             <Card key={index} className="bg-card shadow-lg text-center p-6 flex flex-col items-center">
               <CardHeader className="p-0 text-center flex flex-col items-center">
-                {reason.icon}
-                <CardTitle className="mt-4">{reason.title}</CardTitle>
+                {reason.icon} <CardTitle className="mt-4"> {reason.title}</CardTitle>
               </CardHeader>
               <CardDescription className="text-base mt-4">
                 {reason.description}
