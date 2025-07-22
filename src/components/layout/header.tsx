@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import Logo from '@/components/logo';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navItems = [
   { href: '/services', label: 'Услуги' },
@@ -58,6 +59,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <Button asChild variant="ghost">
              <Link href="/contact">Связаться</Link>
           </Button>
@@ -65,7 +67,8 @@ export default function Header() {
             <Link href="/contact">Обсудить проект</Link>
           </Button>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+           <ThemeToggle />
           <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
