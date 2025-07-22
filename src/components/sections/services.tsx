@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight, Code, Layers, Rocket, Smartphone, Bot, TestTube, Search } from 'lucide-react';
+import Image from "next/image";
 
 const services = [
   {
@@ -46,33 +47,47 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl text-center mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Наши Услуги</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Мы предоставляем полный спектр услуг по созданию, запуску и поддержке цифровых продуктов любого уровня сложности.
-          </p>
+    <div className="bg-background text-foreground">
+      <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
+         <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши Услуги</h1>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Мы предоставляем полный спектр услуг по созданию, запуску и поддержке цифровых продуктов любого уровня сложности.
+              </p>
+            </div>
+             <div className="relative h-80 w-full">
+                <Image
+                    src="https://placehold.co/600x400.png"
+                    alt="Services illustration"
+                    fill
+                    className="object-contain"
+                    data-ai-hint="digital services collage"
+                />
+            </div>
+          </div>
+      </section>
+      <section id="services" className="py-20 md:py-28 bg-secondary">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {services.map((service, index) => (
+                <AccordionItem value={`item-${index}`} key={index} className="border-b border-border/50 bg-card rounded-xl mb-4 px-6 shadow-md">
+                  <AccordionTrigger className="py-6 hover:no-underline">
+                    <div className="flex items-center gap-4">
+                      {service.icon}
+                      <span className="text-xl font-semibold text-left">{service.title}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-base text-muted-foreground">
+                    {service.description}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {services.map((service, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="py-6">
-                  <div className="flex items-center gap-4">
-                    {service.icon}
-                    <span className="text-xl font-semibold">{service.title}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="pb-6 text-base text-muted-foreground">
-                  {service.description}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
