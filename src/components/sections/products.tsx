@@ -32,49 +32,55 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши продукты</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Готовые решения, которые помогают бизнесу расти, автоматизировать процессы и выходить на новый уровень эффективности.
-          </p>
+    <div className="bg-background text-foreground">
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши продукты</h1>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Готовые решения, которые помогают бизнесу расти, автоматизировать процессы и выходить на новый уровень эффективности.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="space-y-24">
-          {products.map((product, index) => (
-            <div 
-              key={product.title} 
-              className="grid md:grid-cols-2 gap-12 md:gap-16 items-center"
-            >
-              <div className={cn("relative h-80 md:h-96 rounded-lg overflow-hidden shadow-xl", index % 2 === 0 ? 'md:order-last' : '')}>
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={product.imageHint}
-                />
-              </div>
-              <div className="max-w-md">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{product.title}</h2>
-                <Link 
-                  href={product.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary hover:underline mb-4"
+      <section className="py-20 md:py-28 bg-secondary">
+         <div className="container mx-auto px-4 md:px-6">
+            <div className="space-y-24">
+            {products.map((product, index) => (
+                <div 
+                key={product.title} 
+                className="grid md:grid-cols-2 gap-12 md:gap-16 items-center"
                 >
-                  {product.linkText}
-                  <ArrowRight className="h-4 w-4 ml-1" />
-                </Link>
-                <p className="text-muted-foreground text-lg">
-                  {product.description}
-                </p>
-              </div>
+                <div className={cn("relative h-80 md:h-96 rounded-lg overflow-hidden shadow-xl", index % 2 === 1 ? 'md:order-last' : '')}>
+                    <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={product.imageHint}
+                    />
+                </div>
+                <div className="max-w-md">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{product.title}</h2>
+                    <Link 
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:underline mb-4"
+                    >
+                    {product.linkText}
+                    <ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                    <p className="text-muted-foreground text-lg">
+                    {product.description}
+                    </p>
+                </div>
+                </div>
+            ))}
             </div>
-          ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
