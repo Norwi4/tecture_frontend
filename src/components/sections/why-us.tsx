@@ -39,11 +39,11 @@ export default function WhyUs() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <Card key={index} className="bg-card border-none shadow-lg text-center p-6 flex flex-col items-center">
-              <CardHeader>
+              <CardHeader className="p-0 text-center flex flex-col items-center">
                 {reason.icon}
                 <CardTitle className="mt-4">{reason.title}</CardTitle>
               </CardHeader>
-              <CardDescription className="text-base">
+              <CardDescription className="text-base mt-4">
                 {reason.description}
               </CardDescription>
             </Card>
