@@ -16,6 +16,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Имя должно содержать не менее 2 символов."),
   email: z.string().email("Пожалуйста, введите действительный адрес электронной почты."),
   message: z.string().min(10, "Сообщение должно содержать не менее 10 символов."),
+  file: z.any().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -98,6 +99,15 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Сообщение</FormLabel>
                         <FormControl><Textarea placeholder="Расскажите о вашем проекте..." className="min-h-[120px]" {...field} /></FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                    <FormField control={form.control} name="file" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Прикрепить файл</FormLabel>
+                        <FormControl>
+                            <Input type="file" {...form.register('file')} />
+                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
