@@ -18,7 +18,7 @@ export default function About() {
             />
           </div>
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">О Компании</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">О компании</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Мы — команда экспертов, увлеченных созданием цифровых продуктов, которые решают реальные бизнес-задачи и приносят измеримую пользу.
             </p>

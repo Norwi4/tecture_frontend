@@ -36,7 +36,7 @@ export default function Products() {
        <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши продукты</h1>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Продукты</h1>
               <p className="mt-4 text-lg text-muted-foreground">
                 Готовые решения, которые помогают бизнесу расти, автоматизировать процессы и выходить на новый уровень эффективности.
               </p>

@@ -58,7 +58,7 @@ export default function Portfolio({ showAllLink = false, projectCount }: Portfol
                 {!showAllLink && (
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Наши проекты</h1>
+                            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Проекты</h1>
                             <p className="text-lg text-muted-foreground">
                                 Мы гордимся каждым проектом, который мы создали. Здесь вы можете увидеть примеры наших работ, которые демонстрируют наш опыт и приверженность качеству.
                             </p>

@@ -51,7 +51,7 @@ export default function Services() {
       <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Наши Услуги</h1>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Услуги</h1>
               <p className="mt-4 text-lg text-muted-foreground">
                 Мы предоставляем полный спектр услуг по созданию, запуску и поддержке цифровых продуктов любого уровня сложности.
               </p>
